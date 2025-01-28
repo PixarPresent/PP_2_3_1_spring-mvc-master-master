@@ -17,7 +17,6 @@ public class UserRepositoryImpl implements UserRepository {
     private EntityManager em;
 
     @Override
-    @Transactional
     public List<User> getAllUsers() {
         return em.createQuery("from User", User.class).getResultList();
     }
@@ -35,7 +34,6 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    @Transactional
     public User readUser(long id) {
         return em.find(User.class, id);
     }

@@ -12,13 +12,13 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-public class HelloController {
+public class UsersController {
 
 
 	private final UserService userService;
 
 	@Autowired
-    public HelloController(UserService userService) {
+    public UsersController(UserService userService) {
         this.userService = userService;
     }
 
